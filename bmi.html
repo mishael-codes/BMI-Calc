@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keyword" content="bmi calculator, bmi, calculator, calc, body, mass, index, body mass index, body mass index calculator">
+    <meta name="author" content="mishael.codes">
+    <title>Body Mass Index</title>
+    <link rel="stylesheet" href="bmi.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Basic <abbr title="Body Mass Index">BMI</abbr> Calculator</h1>
+        <label for="weight">Weight (in kilograms)
+            <input type="number" placeholder="kg" id="weight">
+        </label>
+        <label for="height">Height (in meters)
+            <input type="number" placeholder="m" id="height">
+        </label>
+        <p id="result"></p>
+        <div class="buttons">
+            <button id="reset" onclick="reset()">Reset</button>
+            <button id="calculate" onclick="calculate()">Calculate</button>
+        </div>
+    </div>
+    <script src="bmi.js"></script>
+</body>
+</html>
