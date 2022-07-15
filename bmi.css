@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2.5vh;
+    border-radius: 10px;
+    background: #ccc;;
+    box-shadow: 
+    inset 3px 3px 5px #eee,
+    inset -3px -3px 5px #222;
+}
+
+.heading{
+    margin-bottom: 2vh;
+}
+
+label{
+    display: flex;
+    flex-direction: column;
+    margin: .5rem auto;
+    font-size: large;
+}
+
+input{
+    width: 100%;
+    height: 30px;
+    padding: 7px;
+    border: 0;
+    background: #eee;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+input:focus{
+    border: .5px solid rgb(142, 186, 235);
+    outline: none;
+}
+
+#result{
+    margin: .5rem;
+    font-size: large;
+}
+
+.buttons{
+    position: relative;
+    bottom: -10vh;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3vh;
+}
+
+button{
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    transition: .5s;
+    cursor: pointer;
+}
+
+#reset{
+    background: #ccc;
+    box-shadow: 
+    inset 1px 1px 3px #eee,
+    inset -1px -1px 3px #222;
+    border: 0;
+}
+
+#reset:active{
+    background: #878;
+}
+
+#calculate{
+    background: rgb(142, 186, 235);
+    box-shadow: 
+    inset 1px 1px 3px rgb(202, 215, 230),
+    inset -1px -1px 3px rgb(41, 69, 102);
+    border: 0;
+}
+
+#calculate:active{
+    background: rgb(102, 146, 285);
+}
+
+/*===============================================
+CSS Rules for display on tablets
+===============================================*/
+
+@media(min-width: 540px) and (max-width: 1100px){
+    .container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 2.5vh;
+        /* border: 3px #333 inset; */
+        background: #ccc;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        box-shadow: 
+        inset 3px 3px 5px #eee,
+        inset -3px -3px 5px #222;
+    }
+
+    .buttons{
+        position: relative;
+        bottom: -5vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-bottom: 3vh;
+    }
+    
+    button{
+        width: 150px;
+        height: 40px;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: large;
+        cursor: pointer;
+    }
+}
+/*===============================================
+CSS Rules for display on mobile
+===============================================*/
+@media only screen and (max-width: 530px){
+	.container{
+		width: 100%;
+		height: 100vh;
+	}
+	
+	.header{
+		position: absolute;
+	    top: 7vh;
+	}
+
+    #result{
+        position: absolute;
+        bottom: 37vh;
+        line-break: auto;
+        padding: 3vh;
+    }
+	
+	.buttons{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 3vh auto;
+    margin-top: 5vh;
+    padding: 1.5rem;
+	}
+	
+	button{
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+    margin-bottom: 3vh;
+	}
+}
